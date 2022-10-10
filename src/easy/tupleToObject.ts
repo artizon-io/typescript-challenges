@@ -21,7 +21,8 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TupleToObject<T extends readonly any[]> = {
+// type TupleToObject<T extends readonly any[]> = {
+type TupleToObject<T extends readonly (keyof any)[]> = {  // keyof any === string | symbol | number
   [elem in T[number]]: elem;
 };
 
