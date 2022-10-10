@@ -23,10 +23,10 @@
 // type Includes<T extends readonly any[], U> = T extends [infer V, ...any]
 //   ? (V extends U ? true : Includes<List.Tail<T>, U>)
 //   : false;
-import { List } from 'ts-toolbelt';
+import { List, Any } from 'ts-toolbelt';
 
 type Includes<T extends readonly any[], U> = T extends [infer V, ... infer Rest]
-  ? (Equal<U, V> extends true ? true : Includes<Rest, U>)
+  ? (Any.Equals<U, V> extends 1 ? true : Includes<Rest, U>)
   : false;
 
 let a : List.Includes<[1, 2, 3], 2, "default">
