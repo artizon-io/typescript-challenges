@@ -1,0 +1,12 @@
+{
+  "name": "typescript-challenges",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/artizon-io/typescript-challenges.git",
+  "author": "mingsumsze <mingsumsze.sam@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@type-challenges/utils": "^0.1.1",
+    "ts-toolbelt": "^9.6.0"
+  }
+}
