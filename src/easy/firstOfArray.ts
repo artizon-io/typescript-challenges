@@ -23,13 +23,13 @@
 
 /* _____________ Your Code Here _____________ */
 
-// type First<T extends any[]> = T['length'] extends 0 ? never : T[0];
+type First<T extends any[]> = T['length'] extends 0 ? never : T[0];
 
 // type First<T extends any[]> = T extends [infer firstElem, ...any] ? firstElem : never
 
 import { List } from 'ts-toolbelt';
 
-type First<T extends any[]> = List.Head<T>;
+// type First<T extends any[]> = List.Head<T>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
